@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buc-ee Finder</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Buc-ee Finder</h1>
+    </header>
+
+    <main>
+        <!-- The filter button element -->
+        <div id="filters">
+            <button onclick="filterMarkers('ev')">EV Charging</button>
+            <button onclick="filterMarkers('wash')">Car Wash</button>
+            <button onclick="filterMarkers('all')">Show All</button>
+        </div>
+        
+        <!-- The map container element -->
+        <div id="map"></div>
+    </main>
+
+    <!-- Leaflet JavaScript Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

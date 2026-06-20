@@ -1,0 +1,75 @@
+:root {
+    /* Buc-ee's Official Palette */
+    --bucee-red: #D22630;
+    --bucee-yellow: #FFD200;
+    --bucee-brown: #5D4037;
+    --bucee-white: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Fixed height for the entire viewport */
+    font-family: 'Arial Black', sans-serif;
+    overflow: hidden; /* Prevent the whole page from scrolling */
+}
+
+header {
+    height: 70px;
+    background-color: var(--bucee-red);
+    color: var(--bucee-white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid var(--bucee-yellow);
+    flex-shrink: 0; /* Header will not shrink or disappear */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+main {
+    flex: 1; /* Main takes remaining space below header */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Map is contained here without breaking layout */
+}
+
+#filters {
+    height: 50px;
+    background-color: var(--bucee-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 3px solid var(--bucee-brown);
+    flex-shrink: 0; /* Filters will not shrink or disappear */
+}
+
+button {
+    background: var(--bucee-red);
+    color: white;
+    border: 2px solid var(--bucee-brown);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Map takes all remaining space */
+#map {
+    flex: 1;
+    width: 100%;
+    background: #e0e0e0;
+}
+
+.leaflet-container {
+    height: 100%;
+    width: 100%;
+}
